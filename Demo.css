@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: black;
+}
+
+.card {
+    position: relative;
+    width: 320px;
+    height: 420px;
+    background: #484848;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.card i {
+    position: absolute;
+    color: #484848;
+    font-size: 25px;
+    padding: 15px 280px;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    height: 100%;
+    width: 100%;
+    background: #FF8C00;
+    transform: skewY(345deg);
+    transition: 0.5s;
+}
+
+.card:hover::before {
+    top: -70%;
+    transform: skewY(390deg);
+}
+
+.card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-weight: 600;
+    font-size: 8rem;
+    color: rgb(0, 0, 0, 0.1);
+}
+
+.card .image {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    z-index: 1;
+}
+
+.card .image img {
+    position: absolute;
+    max-width: 100%;
+    transition: 0.5s;
+    height: 200px;
+    width: 150px;
+    margin-top: 300px;
+}
+
+.card:hover .image img {
+    height: 180px;
+    width: 130px;
+    margin-top: 280px;
+}
+
+.card .box {
+    position: relative;
+    padding: 270px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.card .box h3 {
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1;
+}
+
+.card .box .price {
+    color: white;
+    letter-spacing: 1;
+    padding: 10px 0px;
+}
+
+.card .box .buy {
+    position: relative;
+    opacity: 0;
+    color: white;
+    background: #FF8C00;
+    padding: 10px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 60px;
+    transition: 0.5s;
+}
+
+.card:hover .box .buy {
+    margin-top: 0px;
+    opacity: 1;
+}
